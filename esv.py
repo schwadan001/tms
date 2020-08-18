@@ -14,7 +14,6 @@ def clean_str(text):
     replacements = {
         "\n": "",
         "h2": "h4",
-        "</p><p>(<a": " (<a",
         "<a ": "<a target=\"_blank\" "
     }
     for key in replacements:
@@ -39,7 +38,8 @@ for c in tms["categories"]:
                 add_params(url, {
                     "q": v["verse"].replace(" ", "+"),
                     "include-headings": "false",
-                    "include-footnotes": "false"
+                    "include-footnotes": "false",
+                    "include-short-copyright": "false"
                 }),
                 headers={"Authorization": api_key}
             )
