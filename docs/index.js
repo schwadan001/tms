@@ -1,4 +1,4 @@
-$.getJSON("/tms.json", function (tms) {
+$.getJSON("/tms/tms.json", function (tms) {
     var tms_id = document.getElementById("tms");
     var tms_text = "";
     var category_counter = 0;
