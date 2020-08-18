@@ -15,7 +15,7 @@ def clean_str(text):
         "\n": "",
         "h2": "h4",
         "</p><p>(<a": " (<a",
-        "<a class=\"mp3link\"": "<a class=\"mp3link\" target=\"_blank\""
+        "<a ": "<a target=\"_blank\" "
     }
     for key in replacements:
         text = text.replace(key, replacements[key])
