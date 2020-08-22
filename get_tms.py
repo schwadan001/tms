@@ -14,6 +14,8 @@ def clean_str(text):
     replacements = {
         "\n": "",
         "h2": "h4",
+        "<b ": "<sup ",
+        "</b>": "</sup>",
         "<a ": "<a target=\"_blank\" "
     }
     for key in replacements:
@@ -44,7 +46,7 @@ for c in tms["categories"]:
                 headers={"Authorization": api_key}
             )
             v["text"] = clean_str(" ".join(json.loads(r.text)["passages"]))
-            time.sleep(1) # to prevent 427 request-throttling errors
+            time.sleep(1)  # to prevent 427 request-throttling errors
 
 with open(tms_json_file, "w") as f:
     json.dump(tms, f, indent=3)
