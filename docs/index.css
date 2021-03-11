@@ -1,4 +1,4 @@
-h1 {    
+h1 {
     font-size: xx-large;
     font-weight: bold;
     color: #595959;
@@ -12,6 +12,15 @@ h2 {
     color: #595959;
     padding: 0px;
     margin: 0px;
+}
+
+button {
+    margin: 5px 0px 5px 0px;
+    padding: 5px 0px 5px 0px;
+    border: none;
+    background-color: white;
+    text-align: left;
+    width: 100%;
 }
 
 h3 {
@@ -35,6 +44,14 @@ p {
 hr {
     border: 1px solid #595959;
     width: 100%;
+}
+
+.content {
+    display: none;
+}
+
+.active, .collapsible:hover {
+    background-color: lightgrey;
 }
 
 .flex-horiz {
